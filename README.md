@@ -26,7 +26,13 @@ This simulator was created as my python programming project, as part of my Codec
 
 ## Sample Image
 
-To be added
+[Processing instructions](https://github.com/AndreaDavies228/cpu_simulator/blob/main/CPU_simulator.png)
+
+## Instructions
+
+Instructions for the simumlator should be added within the instruction_list list in import_file.py, referring to the instructions above.
+Then simply run the cpu.py py file.
+The cache and memory are imported from the separate memory.py file. Compiler_functions.py converts the instructions into binary for the simulator to read.
 
 ## Author
 
@@ -35,5 +41,3 @@ To be added
 ## License
 
 This project is licensed under the CC0 1.0 Universal Creative Commons License - see the LICENSE.md file for details.
-
-I hope you will enjoy playing!
