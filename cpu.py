@@ -228,6 +228,9 @@ class CPU:
       self.halt()
 
   def process_instructions(self):
+    if self.instruction_dict == {}:
+      print("No instructions in list.")
+      exit()
     while self.PC <= max(k for k, v in self.instruction_dict.items()):
       self.update_display(f"\nProcessing instruction {self.PC}...")
       self.binary_reader()
@@ -237,6 +240,5 @@ class CPU:
 
 
 cpu = CPU()
-
 
 cpu.process_instructions()
