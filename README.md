@@ -18,7 +18,7 @@ The following operations are supported:
 |LW | Rs, Rt, offset | Rt <- MEM[Rs + offset] |
 |SW | Rs, Rt, offset | MEM[Rs + offset] <- Rt |
 |CACHE | Code | Code = 0(Cache off) Code = 1(Cache on), Code = 2(Flush cache) |
-|HALT | ; | Terminate Execution  |
+|HALT |  | Terminate Execution  |
 
 ## Background
 
@@ -26,12 +26,28 @@ This simulator was created as my python programming project, as part of my Codec
 
 ## Sample Image
 
-[Processing instructions](https://github.com/AndreaDavies228/cpu_simulator/blob/main/CPU_simulator.png)
+![Processing instructions](https://github.com/AndreaDavies228/cpu_simulator/blob/main/CPU_simulator.png)
 
 ## Instructions
 
-Instructions for the simumlator should be added within the instruction_list list in import_file.py, referring to the instructions above.
-Then simply run the cpu.py py file.
+The simulator is designed to run in Python 3.
+
+First download the repository.
+From the main directory, open input.txt in notepad.
+
+```bash
+$ notepad "input.txt"
+```
+Enter a list of instructions, refering to the table above
+Each instruction should be one one line, starting with the instruction (e.g. ADD, ADDI), folowed by the operands in the order in the table, separated with whitespace.
+Then save the file.
+
+Next run the file cpu.py in Python to execute the list of instructions.
+
+```bash
+$ python -m cpu
+```
+
 The cache and memory are imported from the separate memory.py file. Compiler_functions.py converts the instructions into binary for the simulator to read.
 
 ## Author
