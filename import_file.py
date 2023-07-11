@@ -13,15 +13,51 @@ from compiler_functions import *
     cache 	        Code 	            Code = 0(Cache off) Code = 1(Cache on), Code = 2(Flush cache)
     halt 	        ; 	                Terminate Execution 
     
-    instructions should be entered as functions, with the operands as arguments, followed by a comma (except for the final instruction):
-    e.g.
-    addi(1,2,3),
-    add(2,3,4),
-    halt()
-    
+ 
     """
 
-instruction_list = [
+my_file = open("input.txt", "r")
+  
+data = my_file.read()
+instructions = data.split("\n")
+my_file.close()
 
+list = [i.split() for i in instructions]
 
-]
+instruction_list = []
+
+for i in list:
+     if i[0].lower() == "add":
+        binary = add(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "addi":
+        binary = addi(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "sub":
+        binary = sub(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "slt":
+        binary = slt(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "bne":
+        binary = bne(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "j":
+        binary = j(int(i[1]))
+        instruction_list.append(binary)
+     if i[0].lower() == "jal":
+        binary = jal(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "lw":
+        binary = lw(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "sw":
+        binary = sw(int(i[1]),int(i[2]),int(i[3]))
+        instruction_list.append(binary)
+     if i[0].lower() == "cache":
+        binary = cache(int(i[1]))
+        instruction_list.append(binary)
+     if i[0].lower() == "halt":
+        binary = halt()
+        instruction_list.append(binary)                                           
+    
