@@ -54,7 +54,7 @@ Next run the file cpu.py in Python to execute the list of instructions.
 $ python -m cpu
 ```
 
-The cache and memory are imported from the separate memory.py file. Compiler_functions.py converts the instructions into binary for the simulator to read.
+import_file.py processes the instructions in the text file using the functions in comiler_functions.py. The cache and memory are imported from the separate memory.py file. 
 
 ## Author
 
