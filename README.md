@@ -38,8 +38,14 @@ From the main directory, open input.txt in notepad.
 ```bash
 $ notepad "input.txt"
 ```
-Enter a list of instructions, refering to the table above
+Enter a list of instructions in the input file, refering to the table above
 Each instruction should be one one line, starting with the instruction (e.g. ADD, ADDI), folowed by the operands in the order in the table, separated with whitespace.
+The file currently contains the following instructions as an example:
+
+>ADDI 1 2 3 <br>
+>ADD 2 3 4 <br>
+>HALT <br>
+
 Then save the file.
 
 Next run the file cpu.py in Python to execute the list of instructions.
